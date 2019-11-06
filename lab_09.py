@@ -55,18 +55,20 @@ hobby = ["sing", "dance", "basketball"]
 # BEGIN PROBLEM 2 SOLUTION
 
 # Parse <json_dict> into a Python dictionary named <profile>
-profile = None
+profile = { "name":"John", "age":30, "city":"New York"}
 
 # Convert <hobby> into a JSON named <json_list>
-json_list = None
+json_list = ["sing", "dance", "basketball"]
 
 # Add a new key-value pair "hobbies"-<hobby> to <profile>
 
 # Convert <profile> into a new JSON named <json_dict2>
-json_dict2 = None
+json_dict2 = json.dumps(profile)
 
 # Write <json_dict2> into a text file named john.json
-
+file_name = 'john.json'
+with open(file_name, 'w') as file_obj:
+    json.dump(json_dict2, file_obj)
 
 print(f"json_list = {json_list}")
 print(f"json_dict2 = {json_dict2}")

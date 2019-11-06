@@ -94,12 +94,22 @@ csv_name = "animals.csv"
 # You're suggested to use with open to open the file and use csv.reader to read the file
 # The expected answer is [(1, "cat"), (2, "dog"), (3, "rabbit")]
 animals = []
-
+with open(csv_name, 'r') as file_obj:
+    reader = csv.reader(file_obj)
+    for row in reader:
+        animals.append(row)
+print(animals)
 # Add a new animal whose id is "4" and name is "bear" to <animals>
+new_animals = ["4", "bear"]
+animals.append(new_animals)
 
 # Write the updated <animals> into a CSV file called animals2.csv with "id", "name" as its header
 # You're suggested to use with open to open the file and use csv.writer to write the file
-
+new_csv = "animals2.csv"
+with open(new_csv, 'w') as file_obj:
+    writer = csv.writer(file_obj)
+    for item in animals:
+        writer.writerow([item[0], item[1]])
 print(f"animals = {animals}")
 # END PROBLEM 3 SOLUTION
 

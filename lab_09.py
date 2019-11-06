@@ -61,7 +61,8 @@ profile = { "name":"John", "age":30, "city":"New York"}
 json_list = ["sing", "dance", "basketball"]
 
 # Add a new key-value pair "hobbies"-<hobby> to <profile>
-
+profile["hobbies"] = hobby
+#print(profile)
 # Convert <profile> into a new JSON named <json_dict2>
 json_dict2 = json.dumps(profile)
 

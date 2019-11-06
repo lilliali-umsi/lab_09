@@ -68,7 +68,7 @@ json_dict2 = json.dumps(profile)
 # Write <json_dict2> into a text file named john.json
 file_name = 'john.json'
 with open(file_name, 'w') as file_obj:
-    json.dump(json_dict2, file_obj)
+    file_obj.write(json_dict2)
 
 print(f"json_list = {json_list}")
 print(f"json_dict2 = {json_dict2}")
